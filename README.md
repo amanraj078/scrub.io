@@ -1,3 +1,5 @@
+You can check the live website here: [scrub-io](https://vercel.live/link/scrub-io.vercel.app?via=project-dashboard-alias-list&p=1&page=/)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
