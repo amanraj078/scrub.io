@@ -16,20 +16,20 @@ import { Input } from "@/components/ui/input";
 function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
     const [fileInput, setFileInput] = useState("");
     const menuList = [
+        // {
+        //     id: 1,
+        //     name: "Getting started",
+        //     icon: Flag,
+        //     path: "",
+        // },
         {
             id: 1,
-            name: "Getting started",
-            icon: Flag,
-            path: "",
+            name: "Github",
+            icon: Terminal,
+            path: "https://github.com/amanraj078/scrub.io.git",
         },
         {
             id: 2,
-            name: "Github",
-            icon: Terminal,
-            path: "",
-        },
-        {
-            id: 3,
             name: "Archive",
             icon: Archive,
             path: "",
@@ -38,13 +38,16 @@ function SideNavBottomSection({ onFileCreate, totalFiles }: any) {
     return (
         <div>
             {menuList.map((menu, index) => (
-                <h2
+                <a
                     key={index}
+                    href={menu.path ? menu.path : "#"} // Use the menu's path as the href
+                    target={menu.path ? "_blank" : "_self"} // Open external link in new tab
+                    rel="noopener noreferrer" // For security reasons when using target="_blank"
                     className="flex gap-2 p-2 px-2 text-[14px] hover:bg-gray-100 rounded-md cursor-pointer font-semibold"
                 >
                     <menu.icon className="text-gray-600 h-5 w-5" />
                     {menu.name}
-                </h2>
+                </a>
             ))}
 
             <Dialog>
